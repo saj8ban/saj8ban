@@ -9,7 +9,7 @@ jobs:
         run: echo "Hello world"
       - name: Multiline run-shell-commands
         run: |
-          node -v
+          node -v 
           npm -v
   parallel-job-macos: 
     runs-on: macos-latest
@@ -23,5 +23,4 @@ jobs:
       - name: echo a string
         run: Write-output "Windows String"
       - name: Error Step
-        run: echo "eror message"
-        
+        run: doesnotexist       
