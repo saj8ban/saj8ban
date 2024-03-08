@@ -24,3 +24,13 @@ jobs:
           echo "::group::My title"
           echo "Inside group"
           echo "::endgroup"
+ #Masking an environment variable: when you print the variable MY_NAME or the value "Mona the Octocat" in the log, you'll see "****" instead of "Mona The Octocat"        
+  bash-Mask-example:
+    runs-on: ubuntu-latest
+    env:
+      MY_NAME: "Mona The Octocat"
+    steps:
+      - name: bash-version
+        run: echo "::add-mask::$MY_NAME"
+
+        
