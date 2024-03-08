@@ -16,3 +16,11 @@ jobs:
       - name: Setting a notice with param
         run: echo "::Notice title=Notice title,file=app.js,line=2,endLine=3,col=5,endColum=7::Missing Semicolon"
           
+  bash-example:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Group of log lines
+        run: |
+          echo "::group::My title"
+          echo "Inside group"
+          echo "::endgroup"
