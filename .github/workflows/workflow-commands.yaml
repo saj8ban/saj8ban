@@ -33,4 +33,12 @@ jobs:
       - name: bash-version
         run: echo "::add-mask::$MY_NAME"
 
+#Example:Masking a generated output within a single job
+#If you dont need to pass your secret from one job to another job, you can
+# 1. Generate the secret
+# 2. Mask it with add-mask
+# 3. Use GITHUB_OUTPUT to make the secret available to other steps within the job
+
+  
+
         
