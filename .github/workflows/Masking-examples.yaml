@@ -1,8 +1,10 @@
-#Example:Masking a generated output within a single job
+#Example1:Masking a generated output within a single job (generate-a-secret-output)
 #If you dont need to pass your secret from one job to another job, you can
 # 1. Generate the secret
 # 2. Mask it with add-mask
 # 3. Use GITHUB_OUTPUT to make the secret available to other steps within the job
+
+
 
 name: Masking-example
 on: push
