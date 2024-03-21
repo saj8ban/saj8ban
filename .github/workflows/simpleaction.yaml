@@ -1,0 +1,13 @@
+name: Simple action
+on: [push]
+jobs: 
+  simple-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simple JS Action
+        id: greet
+        uses: actions/hello-world-javascript-action@5653288d8ee3caca1307c639e8db1aa4da09b3c4
+        with:
+          who-to-greet: Ali
+      - name: Log Greeting Time
+        run: echo "${{steps.greet.outputs.Timeime}}"  
