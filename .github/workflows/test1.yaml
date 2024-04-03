@@ -15,5 +15,6 @@ jobs:
         with:
            role-to-assume: arn:aws:iam::498627113923:role/oidc-eks
            role-session-name: eks-session
-           aws-region: ${{ secrets.AWS_REGION }}
+           aws-region: eu-central-1
+#           aws-region: ${{ secrets.AWS_REGION }}
  
