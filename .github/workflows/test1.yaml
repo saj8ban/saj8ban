@@ -1,0 +1,19 @@
+name: CI
+on:
+  - push
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+        AWS_REGION: eu-central-1
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: configure aws credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+           role-to-assume: arn:aws:iam::498627113923:role/oidc-eks
+           role-session-name: eks-session
+           aws-region: ${{ secrets.AWS_REGION }}
+ 
